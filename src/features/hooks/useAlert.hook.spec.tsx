@@ -7,8 +7,8 @@ describe('useAlert', () => {
             jest.spyOn(window, 'alert').mockImplementation(() => {});
             const view = renderHook(() => useAlert(), {});
 
-            view.result.current.dispatchSuccessAlert('my success message');
-            expect(window.alert).toBeCalledWith('SUCCESS: my success message');
+            view.result.current.dispatchSuccessAlert('successful dispatch!');
+            expect(window.alert).toBeCalledWith('SUCCESS: successful dispatch!');
         })
     })
     describe('when calling dispatch error', () => {
@@ -16,8 +16,8 @@ describe('useAlert', () => {
             jest.spyOn(window, 'alert').mockImplementation(() => {});
             const view = renderHook(() => useAlert(), {});
 
-            view.result.current.dispatchErrorAlert('my success message');
-            expect(window.alert).toBeCalledWith('ERROR: my success message');
+            view.result.current.dispatchErrorAlert('error in dispatch :/');
+            expect(window.alert).toBeCalledWith('ERROR: error in dispatch :/');
         })
     })
 })

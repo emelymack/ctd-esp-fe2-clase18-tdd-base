@@ -1,46 +1,18 @@
-# Getting Started with Create React App
+# Consigna clase 18 - Test Driven Development
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objetivo de esta práctica
+  En esta práctica vamos a centrarnos en la metodología TDD, creando la implementación del código a partir de los tests. Para ello nos centraremos en los siguientes desafíos:
 
-## Available Scripts
+  - El primer desafío consiste en crear la implementación del código del componente “Card”, de forma de que cumpla con los tests ya creados en Card.spec.tsx para que los mismos se ejecuten satisfactoriamente.
+  - El segundo desafío será realizar la misma tarea, pero con el Hook useAlert.
 
-In the project directory, you can run:
+## Consigna de trabajo
+¡Iniciamos! Realizar TDD es similar a un proceso de ingeniería inversa. En este caso vamos a necesitar leer e interpretar los tests ya creados, para definir qué funcionalidades debe cumplir nuestro código. Es una práctica que —bien implementada— nos evita futuros errores y nos obliga a realizar nuestro código de una forma que sea “testeable”.
 
-### `npm start`
+Entre los tests ya creados podemos identificar los siguientes:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - **features/cards/card.component.tsx** y **card.component.spec.tsx**
+  En este caso, tenemos distintos tests que satisfacer, desde el render default al render con diversos estados. De esta manera, podremos estar seguros de que nuestro componente se encuentra funcionando correctamente de forma unitaria ante diversos escenarios.
+  
+  - **features/hooks/useAlert.hook.tsx** y **useAlert.hook.spec.tsx**
+  En este caso, tenemos un Hook con sus tests que satisfacer. Para ello deberemos recordar el uso de mock, para crear funciones y verificar que ellas se hayan llamado correctamente. 
